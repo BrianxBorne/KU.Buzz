@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KU.Buzz</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="posts-column">
+      <header class="posts-header">
+        <div class="header-left">
+          <button class="profile-btn" onclick="location.href='account.html'">
+            <img src="Assets/Images/default-logo.jpg" alt="Profile">
+          </button>
+          <h1 class="header-title">KU.Buzz</h1>
+        </div>
+        <div class="header-right">
+          <div class="search-container" id="searchContainer">
+            <input type="text" class="search-input" placeholder="Search by username..." id="searchInput" />
+            <button class="search-btn" id="searchBtn">Search</button>
+          </div>
+        </div>
+      </header>
+      
+      <section class="posts-container" id="postsContainer">
+      </section>
+      
+      <button class="floating-post-btn" id="floatingPostBtn">New <br> Post</button>
+    </div>
+  </div>
+  
+  <div class="new-post-popup" id="newPostPopup">
+    <div class="new-post-content">
+      <button class="popup-close-btn" id="popupCloseBtn">&times;</button>
+      <h2>Create a Post</h2>
+      <textarea id="popupPostText" placeholder="What's on your mind?" rows="4" maxlength="750"></textarea>
+      <div id="charCount">0/750</div>
+      <div class="popup-image-preview" id="popupImagePreview"></div>
+      <div class="popup-button-group">
+        <label class="upload-btn">
+          Upload
+          <input type="file" id="popupImageUpload" accept="image/*" />
+        </label>
+        <button id="popupPostBtn" class="post-btn">Post</button>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="assets/js/home.js"></script>
+</body>
+</html>
